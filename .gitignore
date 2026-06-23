@@ -2,3 +2,4 @@ node_modules/
 *.db 
 .env 
 __pycache__/ 
+git_push.py

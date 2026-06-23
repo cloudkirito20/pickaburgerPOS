@@ -3132,3 +3132,20 @@ textarea {
   .module-btn { min-height: 118px !important; font-size: 1.35rem !important; }
   .main-grid { grid-template-columns: 1fr !important; }
 }
+
+
+
+/* Visibility improvement patch */
+body, p, span, label, td, th, li, div, h1, h2, h3, h4, h5, h6 {
+  color: #ffffff;
+}
+.muted, .topbar p, .list-row small {
+  color: #f2d7a6 !important;
+}
+input, select {
+  color: #ffffff !important;
+}
+input::placeholder {
+  color: #d9d9d9 !important;
+  opacity: 1;
+}

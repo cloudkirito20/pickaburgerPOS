@@ -3562,3 +3562,134 @@ body::before {
   color: #ffffff !important;
   -webkit-text-fill-color: #ffffff !important;
 }
+
+/* =========================================================
+   FINAL V2 FIX: RAW MATERIAL LIST TEXT VISIBILITY
+   This must be the LAST block in style.css.
+   Fixes pale/yellow text on white raw material rows.
+   ========================================================= */
+
+/* Target every possible raw material list container/card, even if it is
+   moved inside the pop-out modal and not nested under #adminScreen. */
+#rawMaterialList .list-row,
+#rawMasterList .list-row,
+#adminRawMaterialsList .list-row,
+#adminCurrentInventory .list-row,
+#rawMaterialModal .list-row,
+.admin-center-card #rawMaterialList .list-row,
+.admin-center-card #rawMasterList .list-row,
+.admin-center-card #adminRawMaterialsList .list-row,
+.admin-center-card #adminCurrentInventory .list-row,
+.admin-center-card .compact-list .list-row {
+  background: #fffaf0 !important;
+  background-image: none !important;
+  color: #111827 !important;
+  -webkit-text-fill-color: #111827 !important;
+  border: 2px solid rgba(255, 183, 3, 0.55) !important;
+  border-radius: 16px !important;
+  box-shadow: 0 8px 18px rgba(0,0,0,.18) !important;
+}
+
+/* Make all raw material row text dark. */
+#rawMaterialList .list-row *,
+#rawMasterList .list-row *,
+#adminRawMaterialsList .list-row *,
+#adminCurrentInventory .list-row *,
+#rawMaterialModal .list-row *,
+.admin-center-card #rawMaterialList .list-row *,
+.admin-center-card #rawMasterList .list-row *,
+.admin-center-card #adminRawMaterialsList .list-row *,
+.admin-center-card #adminCurrentInventory .list-row *,
+.admin-center-card .compact-list .list-row * {
+  color: #111827 !important;
+  -webkit-text-fill-color: #111827 !important;
+  text-shadow: none !important;
+  opacity: 1 !important;
+  filter: none !important;
+}
+
+/* Details line: Current Qty / Unit Cost */
+#rawMaterialList .list-row small,
+#rawMasterList .list-row small,
+#adminRawMaterialsList .list-row small,
+#adminCurrentInventory .list-row small,
+#rawMaterialModal .list-row small,
+.admin-center-card #rawMaterialList .list-row small,
+.admin-center-card #rawMasterList .list-row small,
+.admin-center-card #adminRawMaterialsList .list-row small,
+.admin-center-card #adminCurrentInventory .list-row small,
+.admin-center-card .compact-list .list-row small {
+  color: #374151 !important;
+  -webkit-text-fill-color: #374151 !important;
+  font-weight: 800 !important;
+}
+
+/* Name line: Buns, Patty, Sliced Cheese, etc. */
+#rawMaterialList .list-row strong,
+#rawMasterList .list-row strong,
+#adminRawMaterialsList .list-row strong,
+#adminCurrentInventory .list-row strong,
+#rawMaterialModal .list-row strong,
+.admin-center-card #rawMaterialList .list-row strong,
+.admin-center-card #rawMasterList .list-row strong,
+.admin-center-card #adminRawMaterialsList .list-row strong,
+.admin-center-card #adminCurrentInventory .list-row strong,
+.admin-center-card .compact-list .list-row strong {
+  color: #0f172a !important;
+  -webkit-text-fill-color: #0f172a !important;
+  font-weight: 950 !important;
+}
+
+/* Keep action buttons readable and blue inside the white rows. */
+#rawMaterialList .list-row button,
+#rawMasterList .list-row button,
+#adminRawMaterialsList .list-row button,
+#adminCurrentInventory .list-row button,
+#rawMaterialModal .list-row button,
+.admin-center-card #rawMaterialList .list-row button,
+.admin-center-card #rawMasterList .list-row button,
+.admin-center-card #adminRawMaterialsList .list-row button,
+.admin-center-card #adminCurrentInventory .list-row button,
+.admin-center-card .compact-list .list-row button {
+  background: #2563eb !important;
+  background-image: none !important;
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+  border: 0 !important;
+  font-weight: 900 !important;
+}
+
+/* Delete buttons */
+#rawMaterialList .list-row button:last-child,
+#rawMasterList .list-row button:last-child,
+#adminRawMaterialsList .list-row button:last-child,
+#adminCurrentInventory .list-row button:last-child,
+#rawMaterialModal .list-row button:last-child,
+.admin-center-card #rawMaterialList .list-row button:last-child,
+.admin-center-card #rawMasterList .list-row button:last-child,
+.admin-center-card #adminRawMaterialsList .list-row button:last-child,
+.admin-center-card #adminCurrentInventory .list-row button:last-child,
+.admin-center-card .compact-list .list-row button:last-child {
+  background: #dc2626 !important;
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+}
+
+/* Broader fallback for any light row/card in the admin popout. */
+.admin-center-card .list-row[style],
+.admin-center-card .list-row {
+  color: #111827 !important;
+  -webkit-text-fill-color: initial !important;
+}
+
+.admin-center-card .list-row > div,
+.admin-center-card .list-row > div *,
+.admin-center-card .list-row strong {
+  color: #111827 !important;
+  -webkit-text-fill-color: #111827 !important;
+}
+
+.admin-center-card .list-row small {
+  color: #374151 !important;
+  -webkit-text-fill-color: #374151 !important;
+}

@@ -3365,3 +3365,78 @@ body::before {
     min-height: 158px !important;
   }
 }
+
+/* ================================
+   ADMIN PAGE READABILITY FIX
+   Keeps admin panels light, but forces readable text colors.
+   ================================ */
+#adminScreen .panel,
+#adminScreen .admin-hero,
+#adminScreen .admin-popout-menu,
+#adminScreen .admin-center-card {
+  background:
+    linear-gradient(145deg, rgba(255,255,255,.98), rgba(255,248,224,.92)) !important;
+  color: #241308 !important;
+  -webkit-text-fill-color: initial !important;
+}
+
+#adminScreen .admin-hero h3,
+#adminScreen .admin-popout-menu h3,
+#adminScreen .panel h3,
+#adminScreen .panel h4,
+#adminScreen .section-title-row h3,
+#adminScreen .section-title-row h4,
+#adminScreen label,
+#adminScreen strong,
+#adminScreen .records-header h4 {
+  color: #21130c !important;
+  -webkit-text-fill-color: #21130c !important;
+}
+
+#adminScreen .muted,
+#adminScreen .panel p,
+#adminScreen .admin-hero p:not(.eyebrow),
+#adminScreen .admin-popout-menu p:not(.eyebrow),
+#adminScreen small,
+#adminScreen .small-note {
+  color: #6f4c25 !important;
+  -webkit-text-fill-color: #6f4c25 !important;
+}
+
+#adminScreen .eyebrow,
+#adminScreen .admin-hero .eyebrow,
+#adminScreen .admin-popout-menu .eyebrow {
+  color: #f4a900 !important;
+  -webkit-text-fill-color: #f4a900 !important;
+  text-shadow: none !important;
+}
+
+#adminScreen .admin-summary-grid .dash-card,
+#adminScreen .admin-summary-grid .admin-dash-card {
+  background:
+    linear-gradient(145deg, rgba(49,27,16,.96), rgba(29,14,8,.98)) !important;
+  color: #fff3d6 !important;
+  -webkit-text-fill-color: initial !important;
+}
+
+#adminScreen .admin-summary-grid .dash-card span,
+#adminScreen .admin-summary-grid .dash-card small {
+  color: #ffe0a6 !important;
+  -webkit-text-fill-color: #ffe0a6 !important;
+}
+
+#adminScreen .admin-summary-grid .dash-card strong {
+  color: #ffb000 !important;
+  -webkit-text-fill-color: #ffb000 !important;
+}
+
+#adminScreen .admin-popout-buttons button {
+  background: linear-gradient(145deg, #fff7dd, #ffe4a6) !important;
+  color: #1f1209 !important;
+  -webkit-text-fill-color: #1f1209 !important;
+}
+
+#adminScreen .admin-popout-buttons button span {
+  color: #5d4329 !important;
+  -webkit-text-fill-color: #5d4329 !important;
+}

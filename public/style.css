@@ -3440,3 +3440,125 @@ body::before {
   color: #5d4329 !important;
   -webkit-text-fill-color: #5d4329 !important;
 }
+/* ================================
+   FINAL ADMIN MODAL FONT VISIBILITY FIX
+   Added to fix pale/yellow text on white list cards inside
+   Raw Material, Menu Items, Purchases, and Users admin pop-out modals.
+   Keep this block at the very END of style.css.
+   ================================ */
+
+#adminScreen .admin-center-card,
+#adminScreen .admin-center-card * {
+  text-shadow: none !important;
+}
+
+/* Keep modal shell dark and readable */
+#adminScreen .admin-center-card {
+  background: #271309 !important;
+  color: #fff7df !important;
+  -webkit-text-fill-color: initial !important;
+}
+
+#adminScreen .admin-center-card h2,
+#adminScreen .admin-center-card h3,
+#adminScreen .admin-center-card h4,
+#adminScreen .admin-center-card .eyebrow,
+#adminScreen .admin-center-card label {
+  color: #fff3c4 !important;
+  -webkit-text-fill-color: #fff3c4 !important;
+}
+
+#adminScreen .admin-center-card p,
+#adminScreen .admin-center-card small,
+#adminScreen .admin-center-card .muted {
+  color: #ffd98a !important;
+  -webkit-text-fill-color: #ffd98a !important;
+}
+
+/* Inputs inside admin modal */
+#adminScreen .admin-center-card input,
+#adminScreen .admin-center-card select,
+#adminScreen .admin-center-card textarea {
+  background: #fffaf0 !important;
+  color: #111827 !important;
+  -webkit-text-fill-color: #111827 !important;
+  border: 2px solid #ffb703 !important;
+  font-weight: 800 !important;
+}
+
+#adminScreen .admin-center-card input::placeholder,
+#adminScreen .admin-center-card textarea::placeholder {
+  color: #6b7280 !important;
+  -webkit-text-fill-color: #6b7280 !important;
+  opacity: 1 !important;
+}
+
+/* White/light rows inside admin pop-out modal */
+#adminScreen .admin-center-card .list-row,
+#adminScreen .admin-center-card .raw-material-item,
+#adminScreen .admin-center-card .material-card,
+#adminScreen .admin-center-card .raw-material-card,
+#adminScreen .admin-center-card .user-card-row,
+#adminScreen .admin-center-card .receipt-row {
+  background: #fffaf0 !important;
+  color: #111827 !important;
+  -webkit-text-fill-color: initial !important;
+  border: 1px solid rgba(255, 183, 3, 0.55) !important;
+  box-shadow: 0 8px 18px rgba(0,0,0,.18) !important;
+}
+
+/* Force text inside white cards to dark readable colors */
+#adminScreen .admin-center-card .list-row div,
+#adminScreen .admin-center-card .list-row span,
+#adminScreen .admin-center-card .list-row strong,
+#adminScreen .admin-center-card .list-row h4,
+#adminScreen .admin-center-card .list-row p,
+#adminScreen .admin-center-card .raw-material-item *,
+#adminScreen .admin-center-card .material-card *,
+#adminScreen .admin-center-card .raw-material-card *,
+#adminScreen .admin-center-card .user-card-row *,
+#adminScreen .admin-center-card .receipt-row * {
+  color: #111827 !important;
+  -webkit-text-fill-color: #111827 !important;
+  text-shadow: none !important;
+  opacity: 1 !important;
+}
+
+/* Secondary/details text in rows */
+#adminScreen .admin-center-card .list-row small,
+#adminScreen .admin-center-card .list-row .muted,
+#adminScreen .admin-center-card .raw-material-item small,
+#adminScreen .admin-center-card .raw-material-item p,
+#adminScreen .admin-center-card .material-card small,
+#adminScreen .admin-center-card .raw-material-card small,
+#adminScreen .admin-center-card .user-card-row small {
+  color: #4b5563 !important;
+  -webkit-text-fill-color: #4b5563 !important;
+  font-weight: 700 !important;
+}
+
+/* Action buttons must stay readable */
+#adminScreen .admin-center-card .row-actions button,
+#adminScreen .admin-center-card .list-row button,
+#adminScreen .admin-center-card button.primary,
+#adminScreen .admin-center-card .secondary {
+  background: #2563eb !important;
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+  border: 0 !important;
+  font-weight: 900 !important;
+}
+
+#adminScreen .admin-center-card .row-actions button:last-child,
+#adminScreen .admin-center-card .danger-btn,
+#adminScreen .admin-center-card .soft-danger {
+  background: #dc2626 !important;
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+}
+
+#adminScreen .admin-center-card .admin-modal-close {
+  background: #ff5a3d !important;
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+}

@@ -3693,3 +3693,37 @@ body::before {
   color: #374151 !important;
   -webkit-text-fill-color: #374151 !important;
 }
+
+
+
+
+/* ==========================================
+   LOGO FIX - PRESERVE ASPECT RATIO
+   Added automatically
+   ========================================== */
+
+.brand-logo,
+.auth-card .brand-logo,
+.topbar .brand-logo,
+img.brand-logo {
+    width: auto !important;
+    height: auto !important;
+    max-height: 140px !important;
+    max-width: 320px !important;
+    object-fit: contain !important;
+    object-position: center center !important;
+    aspect-ratio: auto !important;
+    display: block !important;
+}
+
+.auth-card .brand-logo {
+    margin: 0 auto 16px !important;
+    filter: drop-shadow(0 12px 24px rgba(0,0,0,.35));
+}
+
+@media (max-width: 700px) {
+    .auth-card .brand-logo {
+        max-height: 110px !important;
+        max-width: 240px !important;
+    }
+}

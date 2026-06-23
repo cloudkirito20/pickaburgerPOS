@@ -11,7 +11,7 @@
     <section class="auth-card">
       <img src="logo.png" class="brand-logo" alt="Pick'a Burger Logo">
       <h1>Pick'a Burger POS</h1>
-      <p class="muted">Login to continue. iPhone/iPad users can open the laptop server address in Safari while connected to the same local network.</p>
+      <p class="muted">Login to continue. Sales, inventory, reports, and approvals are saved locally on this device.</p>
       <div id="loginForm" class="auth-form">
         <label>Username<input id="loginUsername" autocomplete="username" placeholder="admin or cashier username"></label>
         <label>Password<input id="loginPassword" type="password" autocomplete="current-password" placeholder="Password"></label>
@@ -34,7 +34,7 @@
         <img src="logo.png" class="brand-logo" alt="Pick'a Burger Logo">
         <div>
           <h1>Pick'a Burger POS</h1>
-          <p>Offline Android WebView POS · Local Database</p>
+          <p>Offline POS · Local Database</p>
         </div>
       </div>
       <div class="userbar"><span id="currentUserLabel">Not logged in</span><button onclick="logoutUser()">Logout</button></div>
@@ -43,7 +43,7 @@
     <main id="homeScreen" class="screen active">
       <section class="hero-card">
         <h2>Welcome</h2>
-        <p>All sales, inventory, profit, delivery records, menu prices, users, and approvals are saved in the active database. iOS devices can access the POS through the laptop local server using Safari on the same network.</p>
+        <p>All sales, inventory, profit, delivery records, menu prices, users, and approvals are saved in the active local database.</p>
       </section>
       <section class="dashboard-grid" id="dashboardCards"></section>
       <section class="main-grid">
@@ -51,7 +51,6 @@
         <button class="module-btn finance admin-only" onclick="showScreen('financialScreen')">Financial<br><span>Reports & Inventory</span></button>
         <button class="module-btn pos" onclick="showScreen('posScreen')">POS Menu<br><span>Pick'a Burger</span></button>
         <button class="module-btn admin admin-only" onclick="showScreen('adminScreen')">Admin<br><span>Menu, Cost & Raw Materials</span></button>
-        <button class="module-btn server admin-only" onclick="showScreen('serverScreen')">Server<br><span>Sync Settings</span></button>
       </section>
     </main>
 
@@ -497,44 +496,6 @@
       <div id="adminCenterModalBody"></div>
     </div>
   </div>
-
-    <main id="serverScreen" class="screen">
-      <nav class="subbar">
-        <button onclick="showScreen('homeScreen')">← Home</button>
-        <h2>Server Sync Settings</h2>
-      </nav>
-
-      <section class="panel">
-        <h3>Laptop Server Connection</h3>
-        <p class="muted">
-          Use this when the laptop, Android device, or iPhone/iPad are connected to the same local network. iOS does not need an app. Open the laptop server URL in Safari. If you change Wi-Fi/network, use the new laptop IP address.
-        </p>
-
-        <div class="form-grid server-form">
-          <input id="serverUrlInput" placeholder="Example: http://192.168.1.105:8080" />
-          <button onclick="saveServerUrl()">Save Server</button>
-          <button onclick="testServerConnection()">Test Connection</button>
-          <button onclick="loadServerAppUi()">Open Server Version</button>
-          <button class="danger-btn" onclick="disableServerSync()">Use This Device Only</button>
-        </div>
-
-        <div class="server-status-card">
-          <strong>Current Mode:</strong>
-          <span id="serverModeText">Checking...</span>
-        </div>
-
-        <div class="server-help">
-          <h4>How to find the laptop server address</h4>
-          <p>On the laptop, keep <strong>server.py</strong> running. It will display available addresses such as:</p>
-          <pre>http://192.168.1.105:8080</pre>
-          <p>Enter or open the address shown by the laptop server. Android, iPhone/iPad, and laptop must be connected to the same Wi-Fi or same local network.</p>
-          <p><strong>To receive UI updates without rebuilding the APK:</strong> tap <strong>Open Server Version</strong>. The Android app will load the POS files from the laptop server, so future HTML/CSS/JS updates only need to be copied to the laptop-server/public folder.</p>
-        </div>
-      </section>
-    </main>
-
-
-
   <div id="drinkChoiceModal" class="modal hidden">
     <div class="modal-card drink-choice-modal-card">
       <button class="close-btn" onclick="closeDrinkChoiceModal()">×</button>

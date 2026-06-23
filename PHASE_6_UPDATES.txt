@@ -1,0 +1,17 @@
+Phase 6 Updates
+================
+
+POS Menu Mobile Scroll Fix
+--------------------------
+- Fixed the POS Menu issue on phones/tablets where users could not complete large orders because the page/cart could not scroll down to the "Complete Order" button.
+- Added Phase 6 CSS rules to keep the POS screen scrollable on mobile.
+- Added safe-area spacing for phone browsers so the button is not blocked by the bottom browser bar.
+- Updated the cart panel behavior so long orders remain usable and the Complete Order button stays reachable.
+
+Main file changed:
+- public/style.css
+
+Payment Modal Scroll Fix:
+- Updated checkout modal styling so the Order Summary can scroll on smaller screens.
+- Limited the order item list height so long carts no longer push the Payment Method buttons off-screen.
+- Made the Payment Method section sticky within the checkout modal for easier checkout on mobile.

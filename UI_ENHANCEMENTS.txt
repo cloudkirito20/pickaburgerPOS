@@ -1,0 +1,18 @@
+Pick'a Burger POS - UI Enhanced Version
+
+What changed:
+- Improved visual polish with warmer branded background and card styling.
+- Better sticky topbar and cleaner user/logout area.
+- Larger, clearer POS menu buttons for touch screens.
+- Better cart readability with sticky total and complete-order button on desktop.
+- Improved modal readability and mobile responsiveness.
+- Burger logo loading animation now moves only; it does not stretch.
+- Better focus states for keyboard/accessibility.
+
+How to run:
+1. Extract this ZIP.
+2. Double-click START_SERVER.bat.
+3. Open http://localhost:8080 in your browser.
+
+Important:
+This is still the same HTML/CSS/JS + Python SQLite POS structure. Do not run npm run dev for this version.
